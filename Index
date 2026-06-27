@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alice Croft Artist – Fine Art & Printmaking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio of Alice Croft, artist and printmaker based in Leeds, UK.">
+  <style>
+    :root {
+      --bg: #f7f5f2;
+      --fg: #222222;
+      --accent: #3c6e71;
+      --accent-soft: #d9e2e9;
+      --border: #cccccc;
+      --max-width: 960px;
+      --font-body: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-body);
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+    }
+
+    .brand {
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .nav-links a {
+      padding-bottom: 0.1rem;
+      border-bottom: 2px solid transparent;
+    }
+
+    .nav-links a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 1.5rem 1rem 3rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero-text h1 {
+      font-size: 2.2rem;
+      margin: 0 0 0.5rem;
+    }
+
+    .hero-text h2 {
+      font-size: 1.1rem;
+      font-weight: 400;
+      margin: 0 0 1.25rem;
+      color: #555;
+    }
+
+    .hero-text p {
+      margin-bottom: 1.25rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background: #2f5558;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--accent);
+    }
+
+    .btn-outline:hover {
+      background: var(--accent-soft);
+    }
+
+    .hero-image {
+      background: var(--accent-soft);
+      border-radius: 12px;
+      padding: 1.25rem;
+      border: 1px solid var(--border);
+      text-align: center;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .hero-image-placeholder {
+      height: 220px;
+      border-radius: 8px;
+      border: 1px dashed #b0b0b0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.75rem;
+      background: #ffffff;
+      color: #999;
+      font-size: 0.85rem;
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    section h3 {
+      font-size: 1.4rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-intro {
+      font-size: 0.95rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .card h4 {
+      margin: 0 0 0.5rem;
+      font-size: 1rem;
+    }
+
+    .card p {
+      margin: 0 0 0.75rem;
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tag {
+      font-size: 0.75rem;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: #333;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery-item {
+      background: white;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      font-size: 0.85rem;
+    }
+
+    .gallery-thumb {
+      height: 160px;
+      background: #e3e3e3;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #777;
+      font-size: 0.8rem;
+    }
+
+    .gallery-meta {
+      padding: 0.6rem 0.8rem 0.8rem;
+    }
+
+    .gallery-meta strong {
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .gallery-meta span {
+      color: #666;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.5fr);
+      gap: 2rem;
+    }
+
+    .contact-card {
+      background: white;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .contact-card dl {
+      margin: 0;
+    }
+
+    .contact-card dt {
+      font-weight: 600;
+      margin-top: 0.5rem;
+      font-size: 0.85rem;
+    }
+
+    .contact-card dd {
+      margin: 0.1rem 0 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    form {
+      background: white;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      padding: 1rem;
+      font-size: 0.9rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      font-family: var(--font-body);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 1rem;
+      font-size: 0.8rem;
+      text-align: center;
+      color: #666;
+      background: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .grid-3,
+      .gallery {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .two-column {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .grid-3,
+      .gallery {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <div class="brand">Alice Croft Artist</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero-text">
+        <h1>Fine Art & Printmaking from Leeds</h1>
+        <h2>Original reduction linocuts, oil paintings, and bespoke art for homes and weddings.</h2>
+        <p>
+          I’m Alice, an artist and printmaker based in Leeds, UK. I create carefully layered reduction
+          linocuts and expressive oil paintings inspired by architecture, landscape, and quiet everyday moments.
+        </p>
+        <div class="hero-cta">
+          <a href="#portfolio" class="btn btn-primary">View portfolio</a>
+          <a href="#contact" class="btn btn-outline">Enquire about a commission</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <div class="hero-image-placeholder">
+          Your hero artwork goes here (upload a photo when you host the site)
+        </div>
+        <p>
+          Replace this placeholder with a photograph of one of your key pieces—ideally a strong reduction
+          linocut or a signature oil painting.
+        </p>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h3>About Alice</h3>
+      <p class="section-intro">
+        A short, clear introduction helps visitors understand your practice and why your work is distinctive.
+        You can adjust this text to match your tone.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Practice</h4>
+          <p>
+            My work combines traditional printmaking techniques with contemporary colour palettes. I specialise
+            in true reduction linocut, building images through carefully planned tonal layers.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Reduction linocut</span>
+            <span class="tag">Oil painting</span>
+            <span class="tag">Colour‑driven</span>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Inspiration</h4>
+          <p>
+            I’m drawn to Leeds architecture, markets, and quiet interior spaces. Many pieces explore light,
+            shadow, and the way colour shifts across surfaces.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Leeds</span>
+            <span class="tag">Architecture</span>
+            <span class="tag">Atmosphere</span>
+          </div>
+        </div>
+        <div class="card">
+          <h4>Approach</h4>
+          <p>
+            Every print begins with a carefully sequenced palette. I plan each layer to keep transitions clean
+            while allowing subtle tonal shifts that give the work depth.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Palette planning</span>
+            <span class="tag">Layered colour</span>
+            <span class="tag">Detail‑focused</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section id="portfolio">
+      <h3>Selected works</h3>
+      <p class="section-intro">
+        Swap the placeholders below for images of your own work. You can group pieces by series, medium,
+        or subject.
+      </p>
+      <div class="gallery">
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            Artwork 1 placeholder (e.g. Leeds Market reduction linocut)
+          </div>
+          <div class="gallery-meta">
+            <strong>Leeds Market Morning</strong>
+            <span>Reduction linocut · 7‑colour palette · 30 × 40 cm</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            Artwork 2 placeholder (e.g. city architecture print)
+          </div>
+          <div class="gallery-meta">
+            <strong>Arcades in Light</strong>
+            <span>Reduction linocut · 6 layers · 25 × 35 cm</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            Artwork 3 placeholder (e.g. oil painting interior)
+          </div>
+          <div class="gallery-meta">
+            <strong>Quiet Room</strong>
+            <span>Oil on canvas · 40 × 50 cm</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            Artwork 4 placeholder (wedding‑focused piece)
+          </div>
+          <div class="gallery-meta">
+            <strong>Wedding Keepsake Print</strong>
+            <span>Custom reduction linocut · venue portrait</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            Artwork 5 placeholder (landscape)
+          </div>
+          <div class="gallery-meta">
+            <strong>Evening Fields</strong>
+            <span>Oil painting · landscape series</span>
+          </div>
+        </div>
+        <div class="gallery-item">
+          <div class="gallery-thumb">
+            Artwork 6 placeholder (experimental colour study)
+          </div>
+          <div class="gallery-meta">
+            <strong>Colour Study</strong>
+            <span>Printmaking experiment · palette exploration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <h3>Commissions & services</h3>
+      <p class="section-intro">
+        Use this section to make it clear what people can actually book or buy from you.
+      </p>
+      <div class="grid-3">
+        <div class="card">
+          <h4>Original reduction linocuts</h4>
+          <p>
+            Limited‑edition prints created with a true reduction process. Ideal for collectors who value
+            craftsmanship and colour.
+          </p>
+          <p><strong>Typical size:</strong> 20–40 cm · <strong>Editions:</strong> 10–30 prints</p>
+        </div>
+        <div class="card">
+          <h4>Wedding & venue prints</h4>
+          <p>
+            Bespoke prints of wedding venues or meaningful locations. Designed as keepsakes or gifts for
+            couples and families.
+          </p>
+          <p><strong>Includes:</strong> concept sketch, palette planning, final print.</p>
+        </div>
+        <div class="card">
+          <h4>Oil painting commissions</h4>
+          <p>
+            Commissioned paintings for homes, offices, or special occasions. We’ll work together on mood,
+            colour, and scale.
+          </p>
+          <p><strong>Medium:</strong> oil on canvas · <strong>Lead time:</strong> 6–12 weeks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h3>Contact & enquiries</h3>
+      <p class="section-intro">
+        You can either use this form (connected to a service like Netlify Forms) or simply list your email
+        and social links.
+      </p>
+      <div class="two-column">
+        <div class="contact-card">
+          <h4>Direct contact</h4>
+          <dl>
+            <dt>Email</dt>
+            <dd><a href="mailto:alicecroftartist@gmail.com">alicecroftartist@gmail.com</a></dd>
+
+            <dt>Instagram</dt>
+            <dd><a href="https://instagram.com/alice_croft_art" target="_blank" rel="noopener">
+              @alice_croft_art
+            </a></dd>
+
+            <dt>Etsy</dt>
+            <dd><a href="https://www.etsy.com/shop/AliceCroftArtist" target="_blank" rel="noopener">
+              AliceCroftArtist
+            </a></dd>
+
+            <dt>Location</dt>
+            <dd>Leeds, United Kingdom</dd>
+          </dl>
+          <p style="margin-top:0.75rem;">
+            For commissions, please include your idea, preferred medium, approximate size, and any deadlines.
+          </p>
+        </div>
+
+        <form>
+          <h4 style="margin-top:0; margin-bottom:0.75rem;">Enquiry form (static)</h4>
+          <p style="font-size:0.85rem; margin-top:0; margin-bottom:0.75rem;">
+            This is a static form. To make it send messages, you can connect it to a free service
+            like Netlify Forms or use mailto links.
+          </p>
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name" placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Tell me about your project or the piece you're interested in."></textarea>
+
+          <button type="submit" class="btn btn-primary">Send enquiry</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> Alice Croft Artist · All rights reserved.
+  </footer>
+
+  <script>
+    // Simple script to keep the year current
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
