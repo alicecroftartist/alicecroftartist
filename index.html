@@ -4,49 +4,88 @@
   <meta charset="UTF-8">
   <title>Alice Croft Artist</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Helvetica Neue', sans-serif;
-      background: #fafafa;
-      color: #222;
+      font-family: "Helvetica Neue", sans-serif;
+      background: #faf8f2; /* soft cream */
+      color: #1f3d2c;      /* deep green */
     }
+
     header {
-      padding: 2rem;
       text-align: center;
-      font-size: 2rem;
-      font-weight: 600;
+      padding: 3rem 1rem 1rem;
     }
+
+    header img {
+      max-width: 260px;
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1f3d2c;
+      font-weight: 600;
+      border-bottom: 3px solid transparent;
+      padding-bottom: 4px;
+    }
+
+    nav a:hover {
+      border-bottom: 3px solid #e8c84a; /* warm yellow accent */
+    }
+
     .gallery {
+      max-width: 1200px;
+      margin: 3rem auto;
+      padding: 0 2rem;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
-      padding: 2rem;
-      max-width: 1200px;
-      margin: auto;
     }
+
     .gallery img {
       width: 100%;
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
+
     footer {
       text-align: center;
-      padding: 2rem;
+      padding: 3rem 1rem;
+      color: #1f3d2c;
       font-size: 0.9rem;
-      color: #666;
     }
   </style>
 </head>
+
 <body>
-  <header>Alice Croft — Linocut & Illustration</header>
+
+  <header>
+    <!-- Replace with your actual logo file -->
+    <img src="logo.png" alt="Alice Croft Artist Logo">
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Gallery</a>
+    <a href="#">Shop</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
 
   <section class="gallery">
-    <img src="your-image-1.jpg" alt="Artwork 1">
-    <img src="your-image-2.jpg" alt="Artwork 2">
-    <img src="your-image-3.jpg" alt="Artwork 3">
+    <img src="your-artwork-1.jpg" alt="Artwork 1">
+    <img src="your-artwork-2.jpg" alt="Artwork 2">
+    <img src="your-artwork-3.jpg" alt="Artwork 3">
   </section>
 
   <footer>© 2026 Alice Croft Artist</footer>
+
 </body>
 </html>
