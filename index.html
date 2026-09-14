@@ -44,7 +44,6 @@
       border-bottom: 3px solid #e8c84a;
     }
 
-    /* NEW SECTION STYLING */
     main section {
       max-width: 900px;
       margin: 4rem auto;
@@ -57,21 +56,6 @@
       border-bottom: 3px solid #e8c84a;
       display: inline-block;
       margin-bottom: 1rem;
-    }
-
-    .gallery {
-      max-width: 1200px;
-      margin: 3rem auto;
-      padding: 0 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
-    }
-
-    .gallery img {
-      width: 100%;
-      border-radius: 6px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -88,15 +72,16 @@
     <img src="logo.png" alt="Alice Croft Artist Logo">
   </header>
 
+  <!-- ⭐ UPDATED NAVIGATION -->
   <nav>
     <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="shop.html">Shop</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
+    <a href="#about">About</a>
+    <a href="#available-work">Available Work</a>
+    <a href="#process">Process</a>
+    <a href="#workshops">Workshops</a>
+    <a href="#contact">Contact</a>
   </nav>
 
-  <!-- ⭐ NEW SECTIONS START HERE -->
   <main>
 
     <section id="about">
@@ -111,10 +96,12 @@
 
     <section id="process">
       <h2>Process</h2>
+
       <h3>Reduction linocut</h3>
       <p>Reduction linocut printmaking involves using the same lino block to print multicolour prints. It is also known as suicide printing, as once you have carved the lino there is no going back! This process demands precision and planning, resulting in unique, unrepeatable editions.</p>
+
       <h4>Solar plate etching</h4>
-      <p>Solar plate etching uses metal plates coated in photo-sensitive polymer. An image is drawn or printed on acetate and transferred to the plate using UV light. This process creates a variety of different finishes, from blocky relief prints to delicate photo reproductions. </p>
+      <p>Solar plate etching uses metal plates coated in photo-sensitive polymer. An image is drawn or printed on acetate and transferred to the plate using UV light. This process creates a variety of different finishes, from blocky relief prints to delicate photo reproductions.</p>
     </section>
 
     <section id="workshops">
@@ -124,17 +111,10 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>For commissions, workshop bookings, or collaborations, email <a href="mailto:alicecroftartist@gmail.com">alicecroftartist@gmail.com</a> </p>
+      <p>For commissions, workshop bookings, or collaborations, email <a href="mailto:alicecroftartist@gmail.com">alicecroftartist@gmail.com</a></p>
     </section>
 
   </main>
-  <!-- ⭐ NEW SECTIONS END HERE -->
-
-  <section class="gallery">
-    <img src="your-artwork-1.jpg" alt="Artwork 1">
-    <img src="your-artwork-2.jpg" alt="Artwork 2">
-    <img src="your-artwork-3.jpg" alt="Artwork 3">
-  </section>
 
   <footer>© 2026 Alice Croft Artist</footer>
 
