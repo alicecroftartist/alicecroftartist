@@ -29,10 +29,10 @@
     .work-item img {
       width: 100%;
       height: auto;
-      max-height: 300px;        /* prevents huge images */
-      object-fit: cover;        /* crops nicely if needed */
+      object-fit: contain;     /* show full image */
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: #faf8f2;     /* prevents odd background colours */
     }
 
     .work-item p {
