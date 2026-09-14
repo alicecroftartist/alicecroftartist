@@ -1,35 +1,171 @@
-/* AVAILABLE WORK GRID */
-.work-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 artworks per row */
-  gap: 2rem;
-  margin-top: 2rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Available Work – Alice Croft Artist</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-.work-item img {
-  width: 100%;
-  height: auto;
-  max-height: 300px;        /* prevents huge images */
-  object-fit: cover;        /* crops nicely if needed */
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+  <style>
+    body { margin: 0; font-family: "Helvetica Neue", sans-serif; background: #faf8f2; color: #1f3d2c; }
+    header { text-align: center; padding: 2.5rem 1rem 1rem; }
+    header img { width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; }
+    nav { text-align: center; margin-top: 1rem; }
+    nav a { margin: 0 1rem; text-decoration: none; color: #1f3d2c; font-weight: 600; border-bottom: 3px solid transparent; padding-bottom: 4px; }
+    nav a:hover { border-bottom: 3px solid #e8c84a; }
 
-.work-item p {
-  text-align: center;
-  margin-top: 0.5rem;
-  font-weight: 600;
-}
+    main { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; line-height: 1.6; }
+    h2 { border-bottom: 3px solid #e8c84a; display: inline-block; margin-bottom: 1rem; }
 
-/* Responsive behaviour */
-@media (max-width: 900px) {
-  .work-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
-  }
-}
+    footer { text-align: center; padding: 3rem 1rem; font-size: 0.9rem; }
 
-@media (max-width: 600px) {
-  .work-grid {
-    grid-template-columns: 1fr; /* 1 per row on mobile */
-  }
-}
+    /* AVAILABLE WORK GRID */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 artworks per row */
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .work-item img {
+      width: 100%;
+      height: auto;
+      max-height: 300px;        /* prevents huge images */
+      object-fit: cover;        /* crops nicely if needed */
+      border-radius: 6px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .work-item p {
+      text-align: center;
+      margin-top: 0.5rem;
+      font-weight: 600;
+    }
+
+    /* Responsive behaviour */
+    @media (max-width: 900px) {
+      .work-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .work-grid {
+        grid-template-columns: 1fr; /* 1 per row on mobile */
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <img src="logo.png" alt="Alice Croft Artist Logo">
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="available-work.html">Available Work</a>
+    <a href="process.html">Process</a>
+    <a href="workshops.html">Workshops</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <main>
+    <h2>Available Work</h2>
+    <p>Browse current pieces available for purchase. All of my work is limited edition, hand printed and signed.</p>
+
+    <div class="work-grid">
+
+      <div class="work-item">
+        <img src="A gaggle of gregarious greylag geese.jpg" alt="A gaggle of gregarious greylag geese">
+        <p>"A gaggle of gregarious greylag geese"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="A heron in the reeds.jpg" alt="A heron in the reeds">
+        <p>"A heron in the reeds"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="A hunter of jewels.jpg" alt="A hunter of jewels">
+        <p>"A hunter of jewels"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="A picnic at Gordale scar, original pencil drawing.jpg" alt="A picnic at Gordale scar, original pencil drawing">
+        <p>"A picnic at Gordale scar", original pencil drawing</p>
+      </div>
+
+      <div class="work-item">
+        <img src="A picnic at Gordale scar.jpg" alt="A picnic at Gordale scar">
+        <p>"A picnic at Gordale Scar"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="A view through the winter willow.jpg" alt="A view through the winter willow">
+        <p>"A view through the winter willow"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="Curlews calling over Pateley Bridge.jpg" alt="Curlews calling over Pateley Bridge">
+        <p>"Curlews calling over Pateley Bridge"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="Guardians of the civic hall.jpg" alt="Guardians of the civic hall">
+        <p>"Guardians of the Civic Hall"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="Impressions of kirkgate markets.jpg" alt="Impressions of kirkgate markets">
+        <p>"Impressions of Kirkgate Markets"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="Reflections in the river Nidd.jpg" alt="Reflections in the river Nidd">
+        <p>"Reflections in the river Nidd"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="Ribblehead Viaduct, monoprint.jpg" alt="Ribblehead Viaduct, monoprint">
+        <p>"Ribblehead Viaduct"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="Spoonbills at sunset.jpg" alt="Spoonbills at sunset">
+        <p>"Spoonbills at sunset"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="The connoisseur of the garden .jpg" alt="The connoisseur of the garden">
+        <p>"The connoisseur of the garden"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="The forgotten summerhouse.jpg" alt="The forgotten summerhouse">
+        <p>"The forgotten summerhouse"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="The gardens socialites.jpg" alt="The gardens socialites">
+        <p>"The gardens socialites"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="The lone tree at Malham.JPG" alt="The lone tree at Malham">
+        <p>"The lone tree at Malham"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="The lone tree at Malham, blue variant.jpg" alt="The lone tree at Malham, blue variant">
+        <p>"The lone tree at Malham", blue variant</p>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>© 2026 Alice Croft Artist</footer>
+
+</body>
+</html>
