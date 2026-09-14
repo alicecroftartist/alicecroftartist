@@ -18,25 +18,35 @@
 
     footer { text-align: center; padding: 3rem 1rem; font-size: 0.9rem; }
 
-    /* AVAILABLE WORK GRID */
+    /* UNIFORM GRID */
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* 3 artworks per row */
+      grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
       margin-top: 2rem;
     }
 
+    .work-item {
+      height: 380px;                 /* all boxes same height */
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      text-align: center;
+    }
+
     .work-item img {
-      width: 100%;
-      height: auto;
-      object-fit: contain;     /* show full image */
+      max-height: 300px;             /* image fits inside box */
+      width: auto;                   /* keep proportions */
+      max-width: 100%;               /* never overflow */
+      object-fit: contain;           /* show full image */
+      margin: 0 auto;
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      background: #faf8f2;     /* prevents odd background colours */
+      background: #faf8f2;
     }
 
     .work-item p {
-      text-align: center;
       margin-top: 0.5rem;
       font-weight: 600;
     }
@@ -44,13 +54,13 @@
     /* Responsive behaviour */
     @media (max-width: 900px) {
       .work-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (max-width: 600px) {
       .work-grid {
-        grid-template-columns: 1fr; /* 1 per row on mobile */
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -123,6 +133,16 @@
       </div>
 
       <div class="work-item">
+        <img src="Reflections in the river Nidd.jpg" alt="Reflections in the river Nidd">
+        <p>"Reflections in the river Nidd"</p>
+      </div>
+
+      <div class="work-item">
+        <img src="Ribblehead Viaduct, monoprint.jpg" alt="Ribblehead Viaduct, monoprint">
+        <p>"Ribblehead Viaduct"</p>
+      </div>
+
+      <div class="work-item">
         <img src="Spoonbills at sunset.jpg" alt="Spoonbills at sunset">
         <p>"Spoonbills at sunset"</p>
       </div>
@@ -152,15 +172,6 @@
         <p>"The lone tree at Malham", blue variant</p>
       </div>
 
-      <div class="work-item">
-        <img src="Ribblehead Viaduct, monoprint.jpg" alt="Ribblehead Viaduct, monoprint">
-        <p>"Ribblehead Viaduct"</p>
-      </div>
-
-      <div class="work-item">
-        <img src="Reflections in the river Nidd.jpg" alt="Reflections in the river Nidd">
-        <p>"Reflections in the river Nidd"</p>
-      </div>
     </div>
   </main>
 
