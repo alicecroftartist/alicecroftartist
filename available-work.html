@@ -27,23 +27,30 @@
     }
 
     .work-item {
-      height: 380px;                 /* all boxes same height */
+      height: 380px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       text-align: center;
+      cursor: pointer;
     }
 
+    /* Hover zoom */
     .work-item img {
-      max-height: 300px;             /* image fits inside box */
-      width: auto;                   /* keep proportions */
-      max-width: 100%;               /* never overflow */
-      object-fit: contain;           /* show full image */
+      max-height: 300px;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
       margin: 0 auto;
       border-radius: 6px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       background: #faf8f2;
+      transition: transform 0.3s ease;
+    }
+
+    .work-item img:hover {
+      transform: scale(1.05);
     }
 
     .work-item p {
@@ -62,6 +69,41 @@
       .work-grid {
         grid-template-columns: 1fr;
       }
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.85);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.3);
+    }
+
+    .lightbox:target {
+      display: flex;
+    }
+
+    .close-lightbox {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      font-size: 40px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -87,88 +129,89 @@
 
     <div class="work-grid">
 
+      <!-- Each item links to its own lightbox -->
       <div class="work-item">
-        <img src="A gaggle of gregarious greylag geese.jpg" alt="A gaggle of gregarious greylag geese">
+        <a href="#img1"><img src="A gaggle of gregarious greylag geese.jpg"></a>
         <p>"A gaggle of gregarious greylag geese"</p>
       </div>
 
       <div class="work-item">
-        <img src="A heron in the reeds.jpg" alt="A heron in the reeds">
+        <a href="#img2"><img src="A heron in the reeds.jpg"></a>
         <p>"A heron in the reeds"</p>
       </div>
 
       <div class="work-item">
-        <img src="A hunter of jewels.jpg" alt="A hunter of jewels">
+        <a href="#img3"><img src="A hunter of jewels.jpg"></a>
         <p>"A hunter of jewels"</p>
       </div>
 
       <div class="work-item">
-        <img src="A picnic at Gordale scar, original pencil drawing.jpg" alt="A picnic at Gordale scar, original pencil drawing">
+        <a href="#img4"><img src="A picnic at Gordale scar, original pencil drawing.jpg"></a>
         <p>"A picnic at Gordale scar", original pencil drawing</p>
       </div>
 
       <div class="work-item">
-        <img src="A picnic at Gordale scar.jpg" alt="A picnic at Gordale scar">
+        <a href="#img5"><img src="A picnic at Gordale scar.jpg"></a>
         <p>"A picnic at Gordale Scar"</p>
       </div>
 
       <div class="work-item">
-        <img src="A view through the winter willow.jpg" alt="A view through the winter willow">
+        <a href="#img6"><img src="A view through the winter willow.jpg"></a>
         <p>"A view through the winter willow"</p>
       </div>
 
       <div class="work-item">
-        <img src="Curlews calling over Pateley Bridge.jpg" alt="Curlews calling over Pateley Bridge">
+        <a href="#img7"><img src="Curlews calling over Pateley Bridge.jpg"></a>
         <p>"Curlews calling over Pateley Bridge"</p>
       </div>
 
       <div class="work-item">
-        <img src="Guardians of the civic hall.jpg" alt="Guardians of the civic hall">
+        <a href="#img8"><img src="Guardians of the civic hall.jpg"></a>
         <p>"Guardians of the Civic Hall"</p>
       </div>
 
       <div class="work-item">
-        <img src="Impressions of kirkgate markets.jpg" alt="Impressions of kirkgate markets">
+        <a href="#img9"><img src="Impressions of kirkgate markets.jpg"></a>
         <p>"Impressions of Kirkgate Markets"</p>
       </div>
 
       <div class="work-item">
-        <img src="Reflections in the river Nidd.jpg" alt="Reflections in the river Nidd">
+        <a href="#img10"><img src="Reflections in the river Nidd.jpg"></a>
         <p>"Reflections in the river Nidd"</p>
       </div>
 
       <div class="work-item">
-        <img src="Ribblehead Viaduct, monoprint.jpg" alt="Ribblehead Viaduct, monoprint">
+        <a href="#img11"><img src="Ribblehead Viaduct, monoprint.jpg"></a>
         <p>"Ribblehead Viaduct"</p>
       </div>
 
       <div class="work-item">
-        <img src="Spoonbills at sunset.jpg" alt="Spoonbills at sunset">
+        <a href="#img12"><img src="Spoonbills at sunset.jpg"></a>
         <p>"Spoonbills at sunset"</p>
       </div>
 
       <div class="work-item">
-        <img src="The connoisseur of the garden .jpg" alt="The connoisseur of the garden">
+        <a href="#img13"><img src="The connoisseur of the garden .jpg"></a>
         <p>"The connoisseur of the garden"</p>
       </div>
 
       <div class="work-item">
-        <img src="The forgotten summerhouse.jpg" alt="The forgotten summerhouse">
+        <a href="#img14"><img src="The forgotten summerhouse.jpg"></a>
         <p>"The forgotten summerhouse"</p>
       </div>
 
       <div class="work-item">
-        <img src="The gardens socialites.jpg" alt="The gardens socialites">
+        <a href="#img15"><img src="The gardens socialites.jpg"></a>
         <p>"The gardens socialites"</p>
       </div>
 
       <div class="work-item">
-        <img src="The lone tree at Malham.JPG" alt="The lone tree at Malham">
+        <a href="#img16"><img src="The lone tree at Malham.JPG"></a>
         <p>"The lone tree at Malham"</p>
       </div>
 
       <div class="work-item">
-        <img src="The lone tree at Malham, blue variant.jpg" alt="The lone tree at Malham, blue variant">
+        <a href="#img17"><img src="The lone tree at Malham, blue variant.jpg"></a>
         <p>"The lone tree at Malham", blue variant</p>
       </div>
 
@@ -176,6 +219,25 @@
   </main>
 
   <footer>© 2026 Alice Croft Artist</footer>
+
+  <!-- LIGHTBOXES -->
+  <div id="img1" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="A gaggle of gregarious greylag geese.jpg"></div>
+  <div id="img2" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="A heron in the reeds.jpg"></div>
+  <div id="img3" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="A hunter of jewels.jpg"></div>
+  <div id="img4" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="A picnic at Gordale scar, original pencil drawing.jpg"></div>
+  <div id="img5" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="A picnic at Gordale scar.jpg"></div>
+  <div id="img6" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="A view through the winter willow.jpg"></div>
+  <div id="img7" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="Curlews calling over Pateley Bridge.jpg"></div>
+  <div id="img8" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="Guardians of the civic hall.jpg"></div>
+  <div id="img9" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="Impressions of kirkgate markets.jpg"></div>
+  <div id="img10" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="Reflections in the river Nidd.jpg"></div>
+  <div id="img11" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="Ribblehead Viaduct, monoprint.jpg"></div>
+  <div id="img12" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="Spoonbills at sunset.jpg"></div>
+  <div id="img13" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="The connoisseur of the garden .jpg"></div>
+  <div id="img14" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="The forgotten summerhouse.jpg"></div>
+  <div id="img15" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="The gardens socialites.jpg"></div>
+  <div id="img16" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="The lone tree at Malham.JPG"></div>
+  <div id="img17" class="lightbox"><a class="close-lightbox" href="#">×</a><img src="The lone tree at Malham, blue variant.jpg"></div>
 
 </body>
 </html>
