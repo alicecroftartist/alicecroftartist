@@ -62,11 +62,12 @@
       text-align: center;
     }
 
-    /* ⭐ Headings now underline only the text */
+    /* ⭐ Headings now underline only the text AND stack vertically */
     h2, h3, h4 {
       border-bottom: 3px solid #e8c84a;
       display: inline-block;     /* underline only beneath text */
-      margin: 0 auto 1rem auto;  /* centre them */
+      width: 100%;               /* forces each heading onto its own line */
+      margin: 0 auto 1rem auto;
       padding-bottom: 4px;
     }
 
@@ -74,7 +75,7 @@
     .process-box {
       padding: 2rem;
       border-radius: 10px;
-      background: rgba(250, 248, 242, 0.60); /* 60% opacity */
+      background: rgba(250, 248, 242, 0.60);
       backdrop-filter: blur(12px);
       box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
     }
