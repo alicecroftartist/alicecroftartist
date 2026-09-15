@@ -6,7 +6,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    body { margin: 0; font-family: "Helvetica Neue", sans-serif; background: #faf8f2; color: #1f3d2c; }
+    body { 
+      margin: 0; 
+      font-family: "Helvetica Neue", sans-serif; 
+      background: #faf8f2; 
+      color: #1f3d2c;
+      position: relative; /* required for background layer */
+    }
+
+    /* Background image with ~20% opacity */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url("field.jpg");
+      background-size: cover;
+      background-position: center;
+      opacity: 0.2;          /* 20% opacity */
+      z-index: -1;           /* behind all content */
+      pointer-events: none;  /* don’t block clicks */
+    }
+
     header { text-align: center; padding: 2.5rem 1rem 1rem; }
     header img { width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; }
     nav { text-align: center; margin-top: 1rem; }
