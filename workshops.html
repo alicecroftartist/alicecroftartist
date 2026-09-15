@@ -29,6 +29,22 @@
       pointer-events: none;
     }
 
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      background: radial-gradient(
+        circle,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,0.25) 100%
+      );
+    }
+
     header { text-align: center; padding: 2.5rem 1rem 1rem; }
     header img { width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; }
 
@@ -43,26 +59,36 @@
     }
     nav a:hover { border-bottom: 3px solid #e8c84a; }
 
-    main { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
-
-    /* MATCHED BLUR + OPACITY TEXT BOX */
-    .content-box {
-      background: rgba(255, 255, 255, 0.55);   /* softer opacity */
-      backdrop-filter: blur(12px);             /* same blur as your other pages */
-      -webkit-backdrop-filter: blur(12px);     /* Safari support */
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    main { 
+      max-width: 900px; 
+      margin: 4rem auto; 
+      padding: 0 2rem; 
       line-height: 1.6;
+      text-align: center;
     }
 
-    h2 { 
-      border-bottom: 3px solid #e8c84a; 
-      display: inline-block; 
-      margin-top: 0;
+    /* ⭐ MATCHED BLURRED-EDGE BOX (same as process-box) */
+    .workshops-box {
+      padding: 2rem;
+      border-radius: 10px;
+      background: rgba(250, 248, 242, 0.60);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
     }
 
-    footer { text-align: center; padding: 3rem 1rem; font-size: 0.9rem; }
+    h2 {
+      border-bottom: 3px solid #e8c84a;
+      display: inline-block;
+      margin-bottom: 1rem;
+      padding-bottom: 4px;
+    }
+
+    footer { 
+      text-align: center; 
+      padding: 3rem 1rem; 
+      font-size: 0.9rem; 
+    }
   </style>
 </head>
 
@@ -82,7 +108,7 @@
   </nav>
 
   <main>
-    <div class="content-box">
+    <div class="workshops-box">
       <h2>Workshops</h2>
       <p>I host small‑group workshops in Leeds, introducing participants to printmaking. I also offer reduction linocut workshops for more experienced printmakers who want to dabble in making beautiful multicolour prints. Upcoming dates are announced on Instagram and through my mailing list.</p>
     </div>
