@@ -11,10 +11,10 @@
       font-family: "Helvetica Neue", sans-serif; 
       background: #faf8f2; 
       color: #1f3d2c;
-      position: relative; /* required for background layer */
+      position: relative;
     }
 
-    /* Background image with ~20% opacity */
+    /* Background image */
     body::before {
       content: "";
       position: fixed;
@@ -25,19 +25,108 @@
       background-image: url("field.jpg");
       background-size: cover;
       background-position: center;
-      opacity: 0.2;          /* 20% opacity */
-      z-index: -1;           /* behind all content */
-      pointer-events: none;  /* don’t block clicks */
+      opacity: 0.2;
+      z-index: -1;
+      pointer-events: none;
     }
 
-    header { text-align: center; padding: 2.5rem 1rem 1rem; }
-    header img { width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto; }
-    nav { text-align: center; margin-top: 1rem; }
-    nav a { margin: 0 1rem; text-decoration: none; color: #1f3d2c; font-weight: 600; border-bottom: 3px solid transparent; padding-bottom: 4px; }
-    nav a:hover { border-bottom: 3px solid #e8c84a; }
-    main { max-width: 900px; margin: 4rem auto; padding: 0 2rem; line-height: 1.6; }
-    h2 { border-bottom: 3px solid #e8c84a; display: inline-block; }
-    footer { text-align: center; padding: 3rem 1rem; font-size: 0.9rem; }
+    /* Soft vignette overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      background: radial-gradient(
+        circle,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,0.25) 100%
+      );
+    }
+
+    header { 
+      text-align: center; 
+      padding: 2.5rem 1rem 1rem; 
+    }
+
+    header img { 
+      width: 100%; 
+      max-width: 600px; 
+      height: auto; 
+      display: block; 
+      margin: 0 auto; 
+    }
+
+    nav { 
+      text-align: center; 
+      margin-top: 1rem; 
+    }
+
+    nav a { 
+      margin: 0 1rem; 
+      text-decoration: none; 
+      color: #1f3d2c; 
+      font-weight: 600; 
+      border-bottom: 3px solid transparent; 
+      padding-bottom: 4px; 
+    }
+
+    nav a:hover { 
+      border-bottom: 3px solid #e8c84a; 
+    }
+
+    main { 
+      max-width: 900px; 
+      margin: 4rem auto; 
+      padding: 0 2rem; 
+      text-align: center;
+    }
+
+    /* ⭐ Blurred-edge content box */
+    .contact-box {
+      padding: 2rem;
+      border-radius: 10px;
+      background: rgba(250, 248, 242, 0.60);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
+      line-height: 1.6;
+    }
+
+    h2 { 
+      border-bottom: 3px solid #e8c84a; 
+      display: inline-block; 
+      margin-bottom: 1rem;
+      padding-bottom: 4px;
+    }
+
+    /* ⭐ Gold buttons */
+    .contact-button {
+      display: block;
+      margin: 1.2rem auto;
+      padding: 0.9rem 1.6rem;
+      background: #e8c84a;
+      color: #1f3d2c;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      width: fit-content;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact-button:hover {
+      background: #d4b43f;
+      transform: translateY(-2px);
+    }
+
+    footer { 
+      text-align: center; 
+      padding: 3rem 1rem; 
+      font-size: 0.9rem; 
+    }
   </style>
 </head>
 
@@ -57,8 +146,26 @@
   </nav>
 
   <main>
-    <h2>Contact</h2>
-    <p>For commissions, workshop bookings, or collaborations, email <a href="mailto:alicecroftartist@gmail.com">alicecroftartist@gmail.com</a></p>
+    <div class="contact-box">
+      <h2>Contact</h2>
+      <p>If you’d like to get in touch, collaborate, or hear more about my work, you can reach me using the buttons below.</p>
+
+      <!-- ⭐ Email button -->
+      <a class="contact-button" href="mailto:alicecroftartist@gmail.com">
+        Contact me via email
+      </a>
+
+      <!-- ⭐ Mailing list button -->
+      <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLScL8CMmh27wnJFuE54WOitbk9QLu7EiHfRAyu9q_Izw3-7y0w/viewform?usp=dialog" target="_blank">
+        Subscribe to my mailing list for exclusive content and offers
+      </a>
+
+      <!-- ⭐ Workshop interest button -->
+      <a class="contact-button" href="https://docs.google.com/forms/d/e/1FAIpQLSf47UsUtn0XR_U1vVprIWn7bnnB1XeNDaMFLSIRczg52urOaQ/viewform?usp=dialog" target="_blank">
+        Sign up for information about printmaking workshops
+      </a>
+
+    </div>
   </main>
 
   <footer>© 2026 Alice Croft Artist</footer>
