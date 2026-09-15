@@ -62,11 +62,11 @@
       text-align: center;
     }
 
-    /* ⭐ Headings underline only text AND stack vertically */
-    h2, h3, h4 {
+    /* Headings underline only text */
+    h3, h4 {
       border-bottom: 3px solid #e8c84a;
-      display: inline-block;   /* underline only beneath text */
-      width: auto;             /* prevents full-width underline */
+      display: inline-block;
+      width: auto;
       margin-bottom: 1rem;
       padding-bottom: 4px;
     }
@@ -80,32 +80,42 @@
       box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
     }
 
+    /* Video styling */
+    .process-video {
+      width: 100%;
+      max-width: 800px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    /* Solar photos */
+    .solar-photos {
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
+      padding: 1rem;
+      background: rgba(250, 248, 242, 0.60);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
+      border-radius: 10px;
+    }
+
+    .solar-photos img {
+      width: 100%;
+      max-width: 260px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
     footer { 
       text-align: center; 
       padding: 3rem 1rem; 
       font-size: 0.9rem; 
     }
-
-    .solar-photos {
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-  padding: 1rem;
-  background: rgba(250, 248, 242, 0.60);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
-  border-radius: 10px;
-}
-
-.solar-photos img {
-  width: 100%;
-  max-width: 260px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
   </style>
 </head>
 
@@ -131,13 +141,20 @@
       <h3>Reduction linocut</h3>
       <p>Reduction linocut is my favourite printmaking method. Here I start with a single block of lino and progressively carve it inbetween printing layers. Not only do I have to think in reverse, printing the lightest colours first, but I also have to make sure that all of the layers line up each time. Here you can see all of the layers printed in my print, "A gaggle of gregarious greylag geese".</p>
 
+      <!-- ⭐ Your video added here -->
+      <video class="process-video" controls>
+        <source src="greylag process.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+
       <h4>Solar plate etching</h4>
-      <p>Solar plate etching uses metal plates coated in photo-sensitive polymer. An image is drawn or printed on acetate and transferred to the plate using UV light. This process creates a variety of different finishes, from blocky relief prints to delicate photo reproductions. Below are two prints that I have made using this method. </p>
-<div class="solar-photos">
-  <img src="Curlews calling over Pateley Bridge.jpg" alt="Curlews calling over Pateley Bridge">
-  <img src="Impressions of kirkgate markets.jpg" alt="Impressions of kirkgate markets">
-  <img src="Guardians of the civic hall.jpg" alt="Guardians of the civic hall">
-</div>
+      <p>Solar plate etching uses metal plates coated in photo-sensitive polymer. An image is drawn or printed on acetate and transferred to the plate using UV light. This process creates a variety of different finishes, from blocky relief prints to delicate photo reproductions. Below are two prints that I have made using this method.</p>
+
+      <div class="solar-photos">
+        <img src="Curlews calling over Pateley Bridge.jpg" alt="Curlews calling over Pateley Bridge">
+        <img src="Impressions of kirkgate markets.jpg" alt="Impressions of kirkgate markets">
+        <img src="Guardians of the civic hall.jpg" alt="Guardians of the civic hall">
+      </div>
 
     </div>
 
