@@ -25,9 +25,26 @@
       background-image: url("field.jpg");
       background-size: cover;
       background-position: center;
-      opacity: 0.2;          /* 20% opacity */
-      z-index: -1;           /* behind all content */
-      pointer-events: none;  /* don’t block clicks */
+      opacity: 0.2;          
+      z-index: -1;           
+      pointer-events: none;
+    }
+
+    /* Soft vignette overlay */
+    body::after {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: -1;
+      background: radial-gradient(
+        circle,
+        rgba(0,0,0,0) 60%,
+        rgba(0,0,0,0.25) 100%
+      );
     }
 
     header { text-align: center; padding: 2.5rem 1rem 1rem; }
@@ -44,18 +61,28 @@
       line-height: 1.6; 
     }
 
+    /* Signature-style name header */
+    .signature {
+      font-family: "Brush Script MT", "Segoe Script", "Lucida Handwriting", cursive;
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      color: #1f3d2c;
+      letter-spacing: 1px;
+    }
+
     h2 { 
       border-bottom: 3px solid #e8c84a; 
       display: inline-block; 
       margin-bottom: 1rem; 
     }
 
-    /* ⭐ Blurred-edge text box */
+    /* Blurred-edge text box */
     .about-box {
-      background: rgba(250, 248, 242, 0.85); /* your original colour, slightly transparent */
+      background: rgba(250, 248, 242, 0.85);
       padding: 2rem;
       border-radius: 20px;
-      backdrop-filter: blur(8px); /* soft blur */
+      backdrop-filter: blur(8px);
       box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     }
 
@@ -83,6 +110,9 @@
   </nav>
 
   <main>
+
+    <div class="signature">Alice Croft</div>
+
     <div class="about-box">
       <h2>Hi, I'm Alice! Here's a little background information about me.</h2>
 
@@ -94,6 +124,7 @@
     
       <p>When I am not doing art related things, I am a keen badminton player and also play underwater hockey!</p>
     </div>
+
   </main>
 
   <footer>© 2026 Alice Croft Artist</footer>
