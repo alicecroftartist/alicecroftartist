@@ -27,13 +27,12 @@
     }
 
     .work-item {
-      height: 380px;
+      height: 420px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       align-items: center;
       text-align: center;
-      cursor: pointer;
     }
 
     /* Hover zoom */
@@ -47,6 +46,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       background: #faf8f2;
       transition: transform 0.3s ease;
+      cursor: pointer;
     }
 
     .work-item img:hover {
@@ -56,6 +56,22 @@
     .work-item p {
       margin-top: 0.5rem;
       font-weight: 600;
+    }
+
+    /* Etsy button */
+    .etsy-button {
+      margin-top: 0.5rem;
+      background: #e8c84a;
+      padding: 8px 14px;
+      border-radius: 6px;
+      text-decoration: none;
+      color: #1f3d2c;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .etsy-button:hover {
+      background: #d4b038;
     }
 
     /* Responsive behaviour */
@@ -129,90 +145,107 @@
 
     <div class="work-grid">
 
-      <!-- Each item links to its own lightbox -->
+      <!-- Example item with Etsy link placeholder -->
       <div class="work-item">
         <a href="#img1"><img src="A gaggle of gregarious greylag geese.jpg"></a>
         <p>"A gaggle of gregarious greylag geese"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482449681/reflections-in-the-river-nidd-solar?ref=shop_home_feat_3&sr_prefetch=1&pf_from=shop_home&logging_key=3271e85ffd15265123eb183697cf815ecf1cc1c3%3A4482449681" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img2"><img src="A heron in the reeds.jpg"></a>
         <p>"A heron in the reeds"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482459802/guardians-of-the-civic-hall-solar-plate?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_5&logging_key=1c2b92a298670ef80e6fc06c7e0eacbbb61640f7%3A4482459802" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img3"><img src="A hunter of jewels.jpg"></a>
         <p>"A hunter of jewels"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482449046/impressions-of-kirkgate-markets-solar?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_7&logging_key=1aedb743401e9c2472be19818e29d25752746c99%3A4482449046" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img4"><img src="A picnic at Gordale scar, original pencil drawing.jpg"></a>
         <p>"A picnic at Gordale scar", original pencil drawing</p>
+        <a class="etsy-button" href="ETSY-LINK-HERE" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img5"><img src="A picnic at Gordale scar.jpg"></a>
         <p>"A picnic at Gordale Scar"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4532940387/a-picnic-at-gordale-scar-solar-plate?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_18&logging_key=e7ef02b4c5de29954df03c37b901c7da7af41ef8%3A4532940387" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img6"><img src="A view through the winter willow.jpg"></a>
         <p>"A view through the winter willow"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482424981/a-view-through-the-winter-willow-chapel?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_11&logging_key=4d7f74df3ccb9b75978fd2cc013ff54ac70842f4%3A4482424981" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img7"><img src="Curlews calling over Pateley Bridge.jpg"></a>
         <p>"Curlews calling over Pateley Bridge"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482462152/curlews-calling-over-pateley-bridge?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_4&logging_key=eaf2a890de9dd6eb1522ae86ba82618fb6ec40ca%3A4482462152" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img8"><img src="Guardians of the civic hall.jpg"></a>
         <p>"Guardians of the Civic Hall"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482458100/guardians-of-the-civic-hall-solar-plate?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_2&logging_key=9217aaf263ce5c53b5b0aaff506afe60550cf593%3A4482458100" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img9"><img src="Impressions of kirkgate markets.jpg"></a>
         <p>"Impressions of Kirkgate Markets"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482438829/impressions-of-kirkgate-markets-solar?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_9&logging_key=f64f94cd66f55a2aa4e318606802cddfe105e8fb%3A4482438829" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img10"><img src="Reflections in the river Nidd.jpg"></a>
         <p>"Reflections in the river Nidd"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482446961/reflections-in-the-river-nidd-solar?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_8&logging_key=18afb0ae5b6f2f0aa7d4ba16454bf13f801fae63%3A4482446961" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img11"><img src="Ribblehead Viaduct, monoprint.jpg"></a>
         <p>"Ribblehead Viaduct"</p>
+        <a class="etsy-button" href="ETSY-LINK-HERE" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img12"><img src="Spoonbills at sunset.jpg"></a>
         <p>"Spoonbills at sunset"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4532948995/spoonbills-at-sunset-limited-edition?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_12&logging_key=de9d506a5522dd2870bcedf0bbf59e04921208b5%3A4532948995" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img13"><img src="The connoisseur of the garden .jpg"></a>
         <p>"The connoisseur of the garden"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4482440318/a-view-through-the-winter-willow-solar?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_10&logging_key=a8825160e1408bb6d1b2669d71a173686b706d59%3A4482440318" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img14"><img src="The forgotten summerhouse.jpg"></a>
         <p>"The forgotten summerhouse"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4532957646/the-forgotten-summerhouse-limited?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_14&logging_key=3efabab8baa0755e5806ea4b18a1d6e74547af12%3A4532957646" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img15"><img src="The gardens socialites.jpg"></a>
         <p>"The gardens socialites"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4575667182/the-gardens-socialites?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_1&logging_key=e0b4ecb0fb0152d5eeda43b2745f46c4273a3085%3A4575667182" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img16"><img src="The lone tree at Malham.JPG"></a>
         <p>"The lone tree at Malham"</p>
+        <a class="etsy-button" href="https://www.etsy.com/uk/listing/4532961272/the-lone-tree-at-malham-cove-limited?sr_prefetch=1&pf_from=shop_home&ref=shop_home_active_17&logging_key=3c36d6dec3e21c591b554a4a454f1088c8bf306d%3A4532961272" target="_blank">Buy on Etsy</a>
       </div>
 
       <div class="work-item">
         <a href="#img17"><img src="The lone tree at Malham, blue variant.jpg"></a>
         <p>"The lone tree at Malham", blue variant</p>
+        <a class="etsy-button" href="ETSY-LINK-HERE" target="_blank">Buy on Etsy</a>
       </div>
 
     </div>
