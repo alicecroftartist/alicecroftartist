@@ -14,7 +14,6 @@
       position: relative;
     }
 
-    /* Background image with ~20% opacity */
     body::before {
       content: "";
       position: fixed;
@@ -30,7 +29,6 @@
       pointer-events: none;
     }
 
-    /* Soft vignette overlay */
     body::after {
       content: "";
       position: fixed;
@@ -85,7 +83,7 @@
       text-align: center;
     }
 
-    /* ⭐ MATCHED BLURRED-EDGE BOX */
+    /* ⭐ Blurred-edge welcome box */
     .welcome-box {
       padding: 2rem;
       border-radius: 10px;
@@ -94,6 +92,7 @@
       -webkit-backdrop-filter: blur(12px);
       box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
       line-height: 1.6;
+      margin-bottom: 3rem;
     }
 
     h2 {
@@ -101,6 +100,41 @@
       display: inline-block;
       margin-bottom: 1rem;
       padding-bottom: 4px;
+    }
+
+    /* ⭐ Featured artwork slideshow */
+    .slideshow-box {
+      padding: 2rem;
+      border-radius: 10px;
+      background: rgba(250, 248, 242, 0.60);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 0 20px 20px rgba(250, 248, 242, 0.60);
+      margin-top: 3rem;
+    }
+
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .slide {
+      display: none;
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    /* Fade animation */
+    @keyframes fade {
+      from { opacity: 0.2; }
+      to { opacity: 1; }
+    }
+
+    .fade {
+      animation-name: fade;
+      animation-duration: 2s;
     }
 
     footer {
@@ -127,13 +161,47 @@
   </nav>
 
   <main>
+
+    <!-- ⭐ Welcome box -->
     <div class="welcome-box">
       <h2>Hello and welcome to my website!</h2>
       <p>Here you’ll find my printmaking, solar plate etchings, oil paintings, and updates about upcoming workshops. Have a browse through my work and feel free to get in touch if you’d like to know more.</p>
     </div>
+
+    <!-- ⭐ Featured artwork slideshow -->
+    <div class="slideshow-box">
+      <h2>Featured Artwork</h2>
+
+      <div class="slideshow-container">
+
+        <img class="slide fade" src="A gaggle of gregarious greylag geese.jpg" alt="A gaggle of gregarious greylag geese">
+        <img class="slide fade" src="The forgotten summerhouse.jpg" alt="The forgotten summerhouse">
+        <img class="slide fade" src="Impressions of kirkgate markets.jpg" alt="Impressions of kirkgate markets">
+        <img class="slide fade" src="Spoonbills at sunset.jpg" alt="Spoonbills at sunset">
+
+      </div>
+    </div>
+
   </main>
 
   <footer>© 2026 Alice Croft Artist</footer>
+
+  <!-- ⭐ Simple slideshow script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 4000); // Change slide every 4 seconds
+    }
+  </script>
 
 </body>
 </html>
