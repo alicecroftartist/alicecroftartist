@@ -62,9 +62,10 @@
       text-align: center;
     }
 
-    h2, h3, h4 { 
-      border-bottom: 3px solid #e8c84a; 
-      display: inline-block; 
+    /* Force headings to stack vertically */
+    h2, h3, h4 {
+      border-bottom: 3px solid #e8c84a;
+      display: block;       /* ⭐ changed from inline-block */
       margin-bottom: 1rem;
     }
 
@@ -106,8 +107,7 @@
 
       <h2>Here is how I make my prints!</h2>
 
-      <!-- ⭐ Reduction linocut moved BELOW Process header -->
-      
+      <!-- ⭐ Now correctly placed BELOW Process -->
       <h3>Reduction linocut</h3>
       <p>Reduction linocut printmaking involves using the same lino block to print multicolour prints. It is also known as suicide printing, as once you have carved the lino there is no going back! This process demands precision and planning, resulting in unique, unrepeatable editions.</p>
 
