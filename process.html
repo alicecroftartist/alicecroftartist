@@ -62,12 +62,12 @@
       text-align: center;
     }
 
-    /* ⭐ Headings now underline only the text AND stack vertically */
+    /* ⭐ Headings underline only text AND stack vertically */
     h2, h3, h4 {
       border-bottom: 3px solid #e8c84a;
-      display: inline-block;     /* underline only beneath text */
-      width: 100%;               /* forces each heading onto its own line */
-      margin: 0 auto 1rem auto;
+      display: inline-block;   /* underline only beneath text */
+      width: auto;             /* prevents full-width underline */
+      margin-bottom: 1rem;
       padding-bottom: 4px;
     }
 
