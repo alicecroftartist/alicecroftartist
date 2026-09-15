@@ -45,9 +45,11 @@
 
     main { max-width: 900px; margin: 4rem auto; padding: 0 2rem; }
 
-    /* MATCHED TEXT BOX STYLE */
+    /* MATCHED BLUR + OPACITY TEXT BOX */
     .content-box {
-      background: rgba(255, 255, 255, 0.85);
+      background: rgba(255, 255, 255, 0.55);   /* softer opacity */
+      backdrop-filter: blur(12px);             /* same blur as your other pages */
+      -webkit-backdrop-filter: blur(12px);     /* Safari support */
       padding: 2rem;
       border-radius: 12px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.08);
