@@ -67,7 +67,7 @@
       text-align: center;
     }
 
-    /* ⭐ MATCHED BLURRED-EDGE BOX (same as process-box) */
+    /* ⭐ MATCHED BLURRED-EDGE BOX */
     .workshops-box {
       padding: 2rem;
       border-radius: 10px;
@@ -82,6 +82,24 @@
       display: inline-block;
       margin-bottom: 1rem;
       padding-bottom: 4px;
+    }
+
+    /* ⭐ BUTTON STYLE */
+    .workshop-button {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.9rem 1.6rem;
+      background: #e8c84a;
+      color: #1f3d2c;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .workshop-button:hover {
+      background: #d4b43f;
+      transform: translateY(-2px);
     }
 
     footer { 
@@ -110,7 +128,13 @@
   <main>
     <div class="workshops-box">
       <h2>Workshops</h2>
-      <p>I host small‑group workshops in Leeds, introducing participants to printmaking. I also offer reduction linocut workshops for more experienced printmakers who want to dabble in making beautiful multicolour prints. Upcoming dates are announced on Instagram and through my mailing list.</p>
+      <p>I host small‑group workshops in Leeds, introducing participants to printmaking. I also offer reduction linocut workshops for more experienced printmakers who want to dabble in making beautiful multicolour prints. Upcoming dates are announced on Instagram and through my mailing list. Please click the button below to be added to my workshop mailing list. This means I can email you when workshops become available.</p>
+
+      <!-- ⭐ Button added here -->
+      <a class="workshop-button" href="https://forms.gle/g8e3JjHGFpT1mLtm7" target="_blank">
+        Express interest in workshops
+      </a>
+
     </div>
   </main>
 
